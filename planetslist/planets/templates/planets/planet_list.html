@@ -1,8 +1,12 @@
+{% extends 'planets/base.html' %}
+
 {% block content %}
     {% for planet in object_list %}
-        <h2><a href="{{ planet.get_absolute_url }}">{{ planet.title }}</a></h2>
-        <p>{{ planet.diameter }}</p>
-        <p>{{ planet.terrain }}</p>
+		<tr>
+            <td><a href="{{ planet.get_absolute_url }}">{{ planet.title }}</a></td>
+            <td>{{ planet.diameter }}</td>
+            <td>{{ planet.terrain }}</td>
+		</tr>
     {% empty %}
     <p>Нет постов</p>
     {% endfor %}
