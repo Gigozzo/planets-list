@@ -5,6 +5,3 @@ from django.views.generic import ListView, DetailView
 
 class PlanetsListView(ListView):
 	model = Planet
-
-class PlanetDetailView(DetailView):
-	model = Planet
