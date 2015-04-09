@@ -54,6 +54,7 @@
         if (a < b) return -1;
         return 0;
     }
+
 	</script>
 
 	{% block extrahead %}
@@ -63,6 +64,7 @@
         {% block jquery %}
         {% endblock %}
         });
+
 
 	</script>
 </head>
@@ -92,7 +94,7 @@
 		</th>
 		<th data-field="surface_water"
 		    data-sortable="true"
-			data-sorter="waterSorter">
+		    data-sorter="waterSorter">
 			Водный покров
 		</th>
 		<th data-field="population"
@@ -103,16 +105,13 @@
 		    data-sortable="true">
 			Гравитация
 		</th>
-		<th data-field="climate"
-		    data-sortable="true">
+		<th data-field="climate">
 			Климат
 		</th>
-		<th data-field="rotation_period"
-		    data-sortable="true">
+		<th data-field="rotation_period">
 			Период вращения
 		</th>
-		<th data-field="orbital_period"
-		    data-sortable="true">
+		<th data-field="orbital_period">
 			Орбитальный период
 		</th>
 		<!--<th data-field="created"-->
