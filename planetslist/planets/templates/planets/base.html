@@ -26,6 +26,36 @@
 	<!-- Latest compiled and minified Locales -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.7.0/locale/bootstrap-table-ru-RU.min.js"></script>
 
+	<script>
+    function waterSorter(a, b) {
+        switch (a.replace(/^\s+/, '').replace(/\s+$/, '')) {
+            case 'No water':
+				a = 0.0
+				break
+			case 'unknown':
+				a = -1.0
+				break
+			default:
+				a = parseFloat(a.replace(' water',''))
+        };
+
+		switch (b.replace(/^\s+/, '').replace(/\s+$/, '')) {
+            case 'No water':
+				b = 0.0
+				break
+			case 'unknown':
+				b = -1.0
+				break
+			default:
+				b = parseFloat(b.replace(' water',''))
+        };
+
+        if (a > b) return 1;
+        if (a < b) return -1;
+        return 0;
+    }
+	</script>
+
 	{% block extrahead %}
 	{% endblock %}
 	<script type="text/javascript">
@@ -61,7 +91,8 @@
 			Диаметер
 		</th>
 		<th data-field="surface_water"
-		    data-sortable="true">
+		    data-sortable="true"
+			data-sorter="waterSorter">
 			Водный покров
 		</th>
 		<th data-field="population"

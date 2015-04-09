@@ -6,7 +6,10 @@
             <!--<td><a href="{{ planet.get_absolute_url }}">{{ planet.name }}</a></td>-->
             <td><a href="{{ planet.url }}">{{ planet.name }}</a></td>
             <td>{{ planet.diameter }}</td>
-            <td>{{ planet.surface_water }}</td>
+            <!--<td>{{ planet.surface_water }}</td>-->
+            <td>{% if planet.surface_water != '0' %}
+	                {% if planet.surface_water != 'unknown' %} {{ planet.surface_water }} water {% else %} unknown {% endif %}
+	            {% else %} No water {% endif %}</td>
             <td>{{ planet.population }}</td>
             <td>{{ planet.gravity }}</td>
             <td>{{ planet.climate }}</td>
