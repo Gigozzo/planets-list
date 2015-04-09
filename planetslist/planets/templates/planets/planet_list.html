@@ -1,7 +1,7 @@
 {% extends 'planets/base.html' %}
 
 {% block content %}
-    {% for planet in object_list %}
+{% for planet in object_list %}
 		<tr>
             <!--<td><a href="{{ planet.get_absolute_url }}">{{ planet.name }}</a></td>-->
             <td><a href="{{ planet.url }}">{{ planet.name }}</a></td>
