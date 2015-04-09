@@ -4,7 +4,7 @@ from planets.models import Planet
 from django.views.generic import ListView, DetailView
 
 class PlanetsListView(ListView):
-    model = Planet
+	model = Planet
 
 class PlanetDetailView(DetailView):
-    model = Planet
+	model = Planet

@@ -25,3 +25,6 @@ INSTALLED_APPS = (
 
 TIME_ZONE = 'Europe/Moscow'
 LANGUAGE_CODE = 'ru-ru'
+
+# PROJECT_ROOT = '/home/gregory/work/planets-list/planetslist'
+# FIXTURE_DIRS = os.path.join(PROJECT_ROOT, 'planets', 'fixtures')

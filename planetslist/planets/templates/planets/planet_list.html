@@ -3,12 +3,21 @@
 {% block content %}
     {% for planet in object_list %}
 		<tr>
-            <td><a href="{{ planet.get_absolute_url }}">{{ planet.title }}</a></td>
+            <!--<td><a href="{{ planet.get_absolute_url }}">{{ planet.name }}</a></td>-->
+            <td><a href="{{ planet.url }}">{{ planet.name }}</a></td>
             <td>{{ planet.diameter }}</td>
-            <td>{{ planet.terrain }}</td>
+            <td>{{ planet.surface_water }}</td>
+            <td>{{ planet.population }}</td>
+            <td>{{ planet.gravity }}</td>
+            <td>{{ planet.climate }}</td>
+            <td>{{ planet.rotation_period }}</td>
+            <td>{{ planet.orbital_period }}</td>
+            <!--<td>{{ planet.created }}</td>-->
+            <!--<td>{{ planet.edited }}</td>-->
+            <!--<td>{{ planet.url }}</td>-->
 		</tr>
     {% empty %}
-    <p>Нет постов</p>
+    <p>Нет планет</p>
     {% endfor %}
 
 {% endblock %}
